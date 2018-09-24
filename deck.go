@@ -42,7 +42,7 @@ func deal(d deck, handSize int) (deck, deck) {
 }
 
 // Write a hand to a file
-func (d deck) safeToFile(filename string) error {
+func (d deck) saveToFile(filename string) error {
 	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
 }
 
